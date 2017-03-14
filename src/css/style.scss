@@ -1,0 +1,42 @@
+/*body{
+  background: red;
+  h1{
+    color: yellow;
+    font-size: 50px;
+  }
+  h2{
+    color: blue;
+    font-size: 50px;
+  }
+}
+.a{
+
+}
+.b{}*/
+@function r($px) {
+  @return $px/32+pem;
+}
+
+@mixin anchor-color($color){
+  color:$color;
+
+
+  &:active,
+    &:visited{
+    color: $color;
+  }
+}
+@mixin bg($bgimg) {
+  background: url($bgimg) no-repeat;
+  background-size: 100% 100%;
+}
+@mixin wh($width ,$hight) {
+  width: $width;
+  height:$hight;
+}
+
+
+div{
+  @include bg('../img/***.png');
+  @include wh(r(240), r(160));
+}
